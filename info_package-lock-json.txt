@@ -1,0 +1,7 @@
+# El archivo package-lock.json
+
+El objetivo del archivo package-lock.json es poder realizar un seguimiento de la versión exacta 
+de cada paquete que se instala para que un producto sea 100% reproducible de la misma 
+manera incluso si los paquetes son actualizados por sus encargados.
+
+

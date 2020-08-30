@@ -1,0 +1,104 @@
+*** Guía sobre el archivo package.json
+
+Ver archivo: info_package-json.txt
+
+*** El archivo package-lock.json
+
+Ver archivo: info_package-lock-json.txt
+
+*** Encuentre la versión instalada de un paquete:
+
+Para ver la última versión de todos los paquetes npm instalados, incluidas sus dependencias:
+$ npm list
+
+Para ver la versión de los paquetes globales instalados:
+$ npm list -g
+
+Para obtener solo sus paquetes de nivel superior (básicamente, los que le dijo a npm 
+que instalara y que enumeró en el package.json), ejecute:
+$ npm list --depth=0
+
+Para ver la versión instalada de un paquete y/o dependencia:
+$ npm list cowsay
+$ npm list minimist
+
+Para ver la versión disponible en el repositorio npm:
+$ npm view cowsay version
+
+
+*** Instale una versión anterior de un paquete npm
+Puede instalar una versión anterior de un paquete npm usando la @sintaxis:
+$ npm install <package>@<version>
+
+Si es un paquete global:
+$ npm install -g <package>@<version>
+
+Si está interesado en enumerar las versiones antiguas de un paquete:
+$ npm view <package> versions
+
+
+*** Actualizar dependencias a la última versión
+
+Cuando se instala un paquete usando:
+$ npm install <packagename>
+
+La última versión disponible del paquete se descarga y se coloca en la carpeta node_modules, 
+y se agrega la entrada correspondiente a los archivos package.json y package-lock.json
+que están presentes en su carpeta actual.
+
+Como referencia local, se instalo el paquete cowsay:
+$ npm install cowsay
+
+En el archivo package.json nos muestra la siguiente regla:
+"dependencies": {
+    "cowsay": "^1.4.0"
+}
+
+Esto nos dice que si a futuro se ejecuta el comando:
+$ npm update
+
+La versión instalada se actualiza. En este caso, el archivo package.json permance sin cambios y
+el archivo package-lock.json se llena diligentemente con la nueva versión.
+
+Para descubrir nuevas versiones de los paquetes, ejecute:
+$ npm outdated
+
+Si en cambio, se requiere actualizar todos los paquetes a la versión principal mas reciente se debe:
+$ npm install -g npm-check-updates
+$ ncu -u
+$ npm update
+
+Si acaba de descargar el proyecto sin las dependencias "node_modules" y desea instalar primero las 
+nuevas versiones principales, simplemente ejecute:
+$ npm install
+
+
+*** Control semántico de versiones usando npm
+
+ver archivo:  "semantic-versioning-using-npm.txt"
+
+
+*** Desinstalación de paquetes con npm
+En local, en la raíz del proyecto:
+$ npm uninstall <package-name>
+
+Use -S o --save para eliminar dependencia en package.json:
+$ npm uninstall -save <package-name>
+
+Use -D o --save-dev para eliminar dependencia de desarrollo:
+$ npm uninstall -save-dev <package-name>
+
+Use -g si el paquete está instalado globalmente:
+$ npm uninstall -g <package-name>
+
+
+*** Paquetes locales o globales de npm
+
+En local, en la raíz del proyecto:
+$ npm list --depth 0
+
+En global, desde cualquier ruta:
+$ npm list -g --depth 0
+
+
+*** 

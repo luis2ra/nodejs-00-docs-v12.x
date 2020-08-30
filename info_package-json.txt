@@ -1,0 +1,60 @@
+# info_package-json.txt
+
+El archivo package.json es una especie de manifiesto para su proyecto. Puede hacer muchas cosas 
+sin ninguna relación. Es un repositorio central de configuración de herramientas, por ejemplo. 
+También es dónde "npm" y "yarn" almacena los nombres y versiones de todos los paquetes instalados.
+
+
+Desglose propiedades especificadas en el archivo:
+
+* name:
+Establece el nombre de la aplicación / paquete
+
+* autor:
+Establece el nombre del autor de la aplicación / paquete
+
+* contributors
+Se utiliza si el proyecto tiene colaboradores en formato lista.
+
+* bugs
+Enlace o enlaces a información de problemas del paquete.
+
+* homepage
+Establece la página de inicio del paquete
+
+* version
+Indica la versión actual
+
+* license
+Indica la licencia del paquete
+
+* keywords
+Lista de palabras claves asociadas al objetivo de uso del paquete.
+
+* description
+Es una breve descripción de la aplicación / paquete
+
+* repository
+Especifica donde se encuentra el repositorio del paquete
+
+* main
+Establecer el punto de entrada para la aplicación
+
+* private
+Si está True evita que la aplicación / paquete se publique accidentalmente en npm
+
+* scripts 
+Define un conjunto de scripts de nodo que puede ejecutar
+
+* dependencies
+Establece una lista de paquetes npm instalados como dependencias
+
+* devDependencies
+Establece una lista de paquetes npm instalados como dependencias de desarrollo
+
+* engines
+Establece en qué versiones de Node.js funciona este paquete / aplicación
+
+* browserslist
+Se utiliza para indicar qué navegadores (y sus versiones) desea admitir
+

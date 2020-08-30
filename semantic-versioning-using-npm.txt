@@ -1,0 +1,28 @@
+# semantic-versioning-using-npm.txt
+
+Todas las versiones de paquetes deben tener 3 dígitos en este formato: x.y.z
+
+- El primer dígito es la versión principal
+- El segundo dígito es la versión menor
+- El tercer dígito es la versión del parche
+
+Generar un nuevo paquete, debe tener presente lo siguiente:
+
+- sube la versión principal cuando realiza cambios de API incompatibles.
+- sube la versión menor cuando agrega funcionalidad de una manera compatible con versiones anteriores.
+- sube la versión del parche cuando realiza correcciones de errores compatibles con versiones anteriores.
+
+Reglas aplicadas en el archivo package.json, al momento de usar el comando <npm update>:
+
+^		=> 	^0.13.0 puede actualizar a versiones parches y menores
+~		=> 	~0.13.0 puede actualizar sólo a versiones parches
+>		=> 	>1.2.1 cualquier versión superior a la especificada
+>=  	=>	cualquier versión superior o igual a la especificada
+<		=>	cualquier versión inferior a la especificada
+<=	=>	cualquier versión inferior o igual a la especificada
+=		=>	instala la versión exacta a la especificada
+-		=>	acepta un rango de versiones
+||		=>	combina conjuntos de versiones, ejemplo: <2.1 || >2.6
+
+sin símbolo 	=> acepta sólo la versión específicada
+latest 			=> se instala la última versión disponible
